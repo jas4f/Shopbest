@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { FaLock, FaUnlock } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
- 
+import image1 from '../assets/Images/Bazzaro.png' 
 FaUnlock
 export const Signup = () => {
    const [checkPassword, setPassword] = useState('password');
@@ -13,7 +12,11 @@ export const Signup = () => {
     }
     return (
         <>
-            <div className="flex items-center justify-center h-[100vh]">
+        <div className="flex items-center justify-center h-[100vh] flex-col md:flex-row">
+            <div>
+            <img src={image1} alt="" />
+            </div>
+            <div className="flex items-center justify-center">
                 <div className="flex flex-col gap-10 items-center shadow-md p-15 sm:px-25 lg:px-15 md:px-15  mt-5 h-fit">
                     <h3 className="font-extralight text-4xl  text-red-500 mt-2 text-center font-serif  ">Sign Up</h3>
                     <form action="" className="flex flex-col items-center justify-center border-red-800 h-full">
@@ -35,6 +38,7 @@ export const Signup = () => {
                     </form>
                 </div>
             </div>
+        </div>
 
         </>
     )
